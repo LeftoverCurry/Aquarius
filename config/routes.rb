@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'users#index'
+  devise_scope :user do
+    root to: 'devise/sessions#new'
+  end
+
+  devise_for :users, controllers: { registrations: 'registrations' }
 end
