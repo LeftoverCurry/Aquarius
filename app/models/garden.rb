@@ -2,5 +2,5 @@
 
 class Garden < ApplicationRecord
   belongs_to :users
-  has_many :plants
+  has_many :plants, dependent: :destroy
 end

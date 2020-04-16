@@ -4,6 +4,6 @@
 class ApplicationController < ActionController::Base
   # Redirects after login to user's gardens
   def after_sign_in_path_for(_resource)
-    user_path(current_user)
+    gardens_path
   end
 end
