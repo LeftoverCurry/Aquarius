@@ -1,4 +1,4 @@
-<%= form_with(model: plant, local: true) do |form| %>
+<%= form_with(model: [@garden, plant], local: true) do |form| %>
   <% if plant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(plant.errors.count, "error") %> prohibited this plant from being saved:</h2>
@@ -34,11 +34,6 @@
   <div class="field">
     <%= form.label :location %>
     <%= form.text_field :location %>
-  </div>
-
-  <div class="field">
-    <%= form.label :garden_id %>
-    <%= form.text_field :garden_id %>
   </div>
 
   <div class="actions">

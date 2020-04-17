@@ -27,8 +27,8 @@
 
 <p>
   <strong>Garden:</strong>
-  <%= @plant.garden_id %>
+  <%= @plant.garden.name %>
 </p>
 
-<%= link_to 'Edit', edit_plant_path(@plant) %> |
-<%= link_to 'Back', plants_path %>
+<%= link_to 'Edit', edit_garden_plant_path(@garden, @plant) %> |
+<%= link_to 'Back', garden_plants_path(@garden) %>

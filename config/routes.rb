@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :plants
-  resources :gardens
+  resources :gardens do
+    resources :plants
+  end
   devise_scope :user do
     root to: 'devise/sessions#new'
   end
