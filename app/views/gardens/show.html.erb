@@ -3,8 +3,15 @@
 <p>
   <strong>Name:</strong>
   <%= @garden.name %>
-  <%= @garden.plants.name%>
 </p>
 
-<%= link_to 'Edit', edit_garden_path(@garden) %> |
+<%= link_to 'Add a plant', garden_plants_path(@garden)%>
+
+<ul>
+  <% @garden.plants.each do |plant|%>
+    <li><%=plant.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Change Name of Garden', edit_garden_path(@garden) %> |
 <%= link_to 'Back', gardens_path %>
