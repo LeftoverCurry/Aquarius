@@ -4,7 +4,7 @@ class CreatePlants < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :frequency
       t.integer :amount
-      t.string :measure
+      t.string :unit_of_measure
       t.string :location
       t.references :garden, null: false, foreign_key: true
 

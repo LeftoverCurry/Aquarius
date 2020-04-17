@@ -3,7 +3,7 @@ FactoryBot.define do
     name { "MyString" }
     frequency { 1 }
     amount { 1 }
-    measure { "MyString" }
+    unit_of_measure { "MyString" }
     location { "MyString" }
     garden { nil }
   end

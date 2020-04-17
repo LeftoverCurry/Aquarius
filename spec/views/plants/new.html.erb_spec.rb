@@ -6,7 +6,7 @@ RSpec.describe "plants/new", type: :view do
       name: "MyString",
       frequency: 1,
       amount: 1,
-      measure: "MyString",
+      unit_of_measure: "MyString",
       location: "MyString",
       garden: nil
     ))
@@ -23,7 +23,7 @@ RSpec.describe "plants/new", type: :view do
 
       assert_select "input[name=?]", "plant[amount]"
 
-      assert_select "input[name=?]", "plant[measure]"
+      assert_select "input[name=?]", "plant[unit_of_measure]"
 
       assert_select "input[name=?]", "plant[location]"
 

@@ -6,7 +6,7 @@ RSpec.describe "plants/show", type: :view do
       name: "Name",
       frequency: 2,
       amount: 3,
-      measure: "Measure",
+      unit_of_measure: "Unit Of Measure",
       location: "Location",
       garden: nil
     ))
@@ -17,7 +17,7 @@ RSpec.describe "plants/show", type: :view do
     expect(rendered).to match(/Name/)
     expect(rendered).to match(/2/)
     expect(rendered).to match(/3/)
-    expect(rendered).to match(/Measure/)
+    expect(rendered).to match(/Unit Of Measure/)
     expect(rendered).to match(/Location/)
     expect(rendered).to match(//)
   end
