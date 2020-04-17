@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'pry'
 class GardensController < ApplicationController
   before_action :set_garden, only: %i[show edit update destroy]
 
@@ -24,7 +25,7 @@ class GardensController < ApplicationController
   # POST /gardens
   # POST /gardens.json
   def create
-    @garden = Garden.new(garden_params)
+    @garden = Garden.create(garden_params)
 
     respond_to do |format|
       if @garden.save

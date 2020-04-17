@@ -6,8 +6,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>User</th>
-      <th>Plant</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,8 +14,6 @@
     <% @gardens.each do |garden| %>
       <tr>
         <td><%= garden.name %></td>
-        <td><%= garden.user_id %></td>
-        <td><%= garden.plant %></td>
         <td><%= link_to 'Show', garden %></td>
         <td><%= link_to 'Edit', edit_garden_path(garden) %></td>
         <td><%= link_to 'Destroy', garden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
